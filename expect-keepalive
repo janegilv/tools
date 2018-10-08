@@ -1,0 +1,6 @@
+#!/usr/bin/expect -f
+# Sends "space backspace" to a process after 60 idle seconds
+# to keepalive program. 
+
+spawn {*}$argv
+interact timeout 60 { send " \b" }
